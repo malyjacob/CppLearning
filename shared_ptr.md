@@ -1,4 +1,9 @@
 # shared_ptr
+
+**前情:**
+> [unique_ptr](./unique_ptr.md)
+<br/>
+
 不同于`unnique_ptr`的独占性, `shared_ptr`是专门用来多个智能指针指向同一个资源的.
 
 在`shared_ptr`内部, `shared_ptr`持续追踪有多少个`shared_ptr`指向它所指向的资源.
@@ -155,8 +160,8 @@ Crash了.
 这就是产生错误的缘由.
 
 ## 部分规范建议
-- 不直接从裸指针生成`shared_ptr`, 原因跟`unnique_ptr`的一样!
+- 不直接从裸指针生成`shared_ptr`, 原因跟[unique_ptr](./unique_ptr.md)的一样!
 
-- 尽量使用`make_shared`而不是构造函数来生成`shared_ptr`, 原因还是与`unnique_ptr`一样!
+- 尽量使用`make_shared`而不是构造函数来生成`shared_ptr`, 原因还是与[unique_ptr](./unique_ptr.md)一样!
 
 - 当要使用多个`shared_ptr`指向同一资源时, 建议先使用`make_shared`生成第一个指向资源的`shared_ptr`.之后指向这个资源的`shared_ptr`的指针都要从第一个`shared_ptr`或者由第一个`shared_ptr`层层复制而来的`shared_ptr`复制过来.(有点绕哈).

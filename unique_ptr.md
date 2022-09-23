@@ -1,4 +1,9 @@
 # unique_ptr
+
+**前情:**
+> [Smart-pointer](./Smart-Pointer.md)
+<br/>
+
 `std::unique_ptr`是`std::auto_ptr`的替代品. 它比后者具有更高的安全性.
 
 ## unique_ptr
