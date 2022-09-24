@@ -1,6 +1,7 @@
 #exclude:
 .out
 .*
+.exe
 
 # special:
 !.gitignore
